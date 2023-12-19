@@ -2,6 +2,7 @@ resource "github_repository" "repository" {
   name         = var.name
   description  = var.description
   homepage_url = var.homepage_url
+  topics       = var.topics
   visibility   = var.private ? "private" : "public"
 
   allow_auto_merge            = true

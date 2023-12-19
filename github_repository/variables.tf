@@ -12,6 +12,11 @@ variable "homepage_url" {
   default = ""
 }
 
+variable "topics" {
+  type    = list(string)
+  default = []
+}
+
 variable "private" {
   type    = bool
   default = true
