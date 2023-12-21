@@ -7,6 +7,8 @@ terraform {
   }
 }
 
+provider "aws" {}
+
 resource "aws_amplify_app" "main" {
   name = var.name
 }

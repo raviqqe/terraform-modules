@@ -7,6 +7,8 @@ terraform {
   }
 }
 
+provider "github" {}
+
 resource "github_repository" "repository" {
   name         = var.name
   description  = var.description
