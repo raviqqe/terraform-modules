@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "aws"
+      version = "~> 5.0"
+    }
+  }
+}
+
 resource "aws_amplify_app" "main" {
   name = var.name
 }
