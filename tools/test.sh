@@ -1,7 +1,10 @@
 #!/bin/sh
 
-set -e
+set -ex
 
-for directory in *; do
-  (cd $directory && ./test.sh)
+for path in */main.tf; do
+  (
+    cd $(dirname $path)
+    terraform plan -var-file test.tfvars
+  )
 done
