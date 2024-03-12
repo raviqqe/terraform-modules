@@ -29,4 +29,8 @@ resource "github_repository" "repository" {
   squash_merge_commit_message = "PR_BODY"
   squash_merge_commit_title   = "PR_TITLE"
   vulnerability_alerts        = true
+
+  pages {
+    build_type = "workflow"
+  }
 }
