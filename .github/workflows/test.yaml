@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: raviqqe/enable-homebrew@70f0031499e58d68b205c69e67a8a42db68d81c9 # v1.0.2
+      - run: brew install hashicorp/tap/terraform
       - run: tools/test.sh
   spell_check:
     runs-on: ubuntu-latest
